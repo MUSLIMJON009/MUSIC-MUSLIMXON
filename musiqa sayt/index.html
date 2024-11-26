@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musiqiy Sayt</title>
+    <style>
+        /* Orqa fon va umumiy sahifa sozlamalari */
+        body {
+            margin: 10000;
+            font-family: Arial, sans-serif;
+            background-image: url('./rasm.jpg'); /* Orqa fon rasmi */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        /* Ramka uslubi */
+        .audio-frame {
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.133); /* Qorong'ilik efekti */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgb(255, 255, 255);
+        }
+
+        .audio-frame h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        /* Audio fayllar uslubi */
+        .audio-list audio {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+    </style>
+    <style>
+        /* Sahifa uslubi */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3; /* Oddiy orqa fon rangi */
+            text-align: center; /* Matnni markazga hizalash */
+        }
+
+        /* H1 uchun uslub */
+        h1 {
+            margin: 20px 0;
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        /* Rasm uslubi */
+        .center-image {
+            display: block;
+            margin: 0 auto; /* Rasmni markazlash */
+            width: 50%; /* Rasmning kengligini sozlash (ixtiyoriy) */
+            max-width: 400px; /* Maksimal kenglik */
+            border-radius: 10px; /* Rasmning burchaklarini yumaloq qilish (ixtiyoriy) */
+        }
+    </style>
+     <style>
+        /* Sahifa asosiy uslubi */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #fffcfc;
+        }
+
+        /* Kommentlar bo'limi */
+        .comment-section {
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            background: #000000;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment-section h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+
+        /* Forma uslubi */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Foydalanuvchi izohlari */
+        .comments-display {
+            margin-top: 20px;
+        }
+
+        .single-comment {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #000000;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+        }
+    </style>
+     <style>
+        /* Sahifa umumiy uslubi */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Ijtimoiy tarmoqlar uchun container */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        /* Tugmalar uslubi */
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Instagram tugmasi */
+        .instagram {
+            background-color: #E4405F;
+        }
+        .instagram:hover {
+            background-color: #d73756;
+        }
+
+        /* Telegram tugmasi */
+        .telegram {
+            background-color: #0088CC;
+        }
+        .telegram:hover {
+            background-color: #0077b5;
+        }
+    </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>H1 Rangini O'zgartirish</title>
+     <style>
+         /* Orqa fon va umumiy uslub */
+         body {
+             background-color: #333; /* To'fon rang (quyuq rang) */
+             color: white;
+             text-align: center;
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 20px;
+         }
+ 
+         /* H1 uslubi */
+         h1 {
+             color: white; /* Matn rangi oq */
+             font-size: 36px; /* Matn o'lchami */
+             margin-top: 20px;
+         }
+     </style>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f3f3;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .search-box {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+        <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>YouTube Video Yuklab Olish</title>
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             text-align: center;
+             margin: 0;
+             padding: 20px;
+             background-color: #f3f3f3;
+         }
+ 
+         h1 {
+             color: #ffffff;
+         }
+ 
+         .download-section {
+             margin-top: 20px;
+         }
+ 
+         input[type="text"] {
+             padding: 10px;
+             width: 80%;
+             max-width: 400px;
+             font-size: 16px;
+             border: 1px solid #ccc;
+             border-radius: 5px;
+             margin-bottom: 10px;
+         }
+ 
+         button {
+             padding: 10px 20px;
+             font-size: 16px;
+             color: rgb(0, 0, 0);
+             background-color: #007BFF;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+             margin: 5px;
+         }
+ 
+         button:hover {
+             background-color: #0056b3;
+         }
+     </style>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 20px;
+                background-color: #f3f3f3;
+            }
+    
+            h1 {
+                color: #ffffff;
+            }
+    
+            .youtube-button {
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                background-color: #FF0000; /* YouTube qizil rangi */
+                padding: 10px 20px;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 5px;
+                margin-top: 20px;
+                transition: background-color 0.3s;
+            }
+    
+            .youtube-button:hover {
+                background-color: #cc0000; /* Tugma ustiga kursor borganida rangi */
+            }
+    
+            .youtube-button i {
+                margin-right: 8px;
+            }
+        </style>
+</head>
+<body>
+    
+    
+    <div>
+        <h1>SIZ YOQTIRGAN MUSIQALAR MUSLIMKHAN KALNALIDA</h1>
+        <img src="./photo_2024-11-23_10-59-34.jpg" alt="Mening Rasmlarim" class="center-image">
+    </div>
+    <h1>Sayt Qidiruv Bo'limi</h1>
+    <p>Izlayotgan narsangizni kiriting va platformani tanlang:</p>
+
+    <div class="search-box">
+        <input type="text" id="searchQuery" placeholder="Qidiruv uchun so'zni kiriting">
+        <br>
+        <button onclick="searchGoogle()">Google'da Qidirish</button>
+        <button onclick="searchYouTube()">YouTube'da Qidirish</button>
+    </div>
+    <h1>YouTube Video Yuklash</h1>
+    <p>YouTube video URL manzilini kiriting va yuklab olish tugmasini bosing:</p>
+
+    <div class="download-section">
+        <input type="text" id="youtubeUrl" placeholder="YouTube video URL manzili">
+        <br>
+        <button onclick="downloadVideo()">Videoni Yuklash</button>
+    </div>
+
+    <script>
+        function downloadVideo() {
+            const url = document.getElementById('youtubeUrl').value;
+            if (url.trim() !== '') {
+                // Y2mate yoki shunga o'xshash servisga havolani yaratish
+                const downloadUrl = `https://y2mate.com/youtube/${encodeURIComponent(url)}`;
+                window.open(downloadUrl, '_blank'); // Yangi oynada ochadi
+            } else {
+                alert('Iltimos, YouTube video URL manzilini kiriting!');
+            }
+        }
+    </script>
+    <script>
+        // Google qidiruvi funksiyasi
+        function searchGoogle() {
+            const query = document.getElementById('searchQuery').value;
+            if (query.trim() !== '') {
+                const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(url, '_blank'); // Yangi oynada ochadi
+            } else {
+                alert('Iltimos, qidiruv uchun so\'zni kiriting!');
+            }
+        }
+
+        // YouTube qidiruvi funksiyasi
+        function searchYouTube() {
+            const query = document.getElementById('searchQuery').value;
+            if (query.trim() !== '') {
+                const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+                window.open(url, '_blank'); // Yangi oynada ochadi
+            } else {
+                alert('Iltimos, qidiruv uchun so\'zni kiriting!');
+            }
+        }
+    </script>
+    <div class="audio-frame">
+        <h2>MP3 QOSHIQLAR</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./music/-OhisvwgbM8.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/176928583640.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/EMIN feat. JONY - КАМИН.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/Письма.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/0an15ri4fume1jd2fo02.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/1a1wwbjd2nf6orvk9vkt.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/2_5258415455055401362.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/4Aet7cNEp4Q.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/93gdz5h9nd0s3jupar3x.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/bechora qiz 000.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <div class="audio-frame">
+        <h2>siz yoqtirgan music</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./music/I Ke Harru.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/Killing me inside (tik tok).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/LaLaLa (slowed).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/Menek wla meni.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/Seni seviyorum.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/u8isueoywsd3df0mou.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/Менде қандай кінә бар.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/Мысли - xcho.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/a9om6d4edjtk74n40r44.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Behruz ( YAGZON ) Esimda.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>MUSIC SONG BY</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./yagzon/Doxxim - Bevafo.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./music/176928583640.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Doxxim - Kechir gulim (Music 2021).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Doxxim - Melodramma.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Doxxim - Yurak Ko'nmas.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Doxxim_Aslida_u_Ha_u_Meni_Bir_donam_Edi_ _ _Telegram_kanalimiz_T.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Doxxim_Aslida_u_PREMYERA_text_v5JAjtx93lQ_140.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Doxxim_Chiroyligim_Gulim_Доксим.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Gr_Yagzon_Yolgizbek_Alvido__Гр_Я.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/hali_jonim_san_mani_yiglab_eslisan_xali_jonim_san_mani_yiglab_eslisan.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>YAGZON GURUHI</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./yagzon/icnv7i0s9jmhg65zk17g.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/musiqam+++++.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/p6jhhnoqmeuaem7jstkc.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Qizil Atirgul (www.Moqina.net)   Yagzon Guruhi.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/raqamingni ozgartir 5 (1).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/TO'YING KUNI.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/u yagona 4.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/xrhjtdvbyngnrdcuq1gs.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/xxsr5w5bv22n8unb9gjm.m4a" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/y5yWJCZmTt8.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>XON MUSIC</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./yagzon/y5yWJCZmTt8.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/Yolg-izBek_Sanjay-Eslabtur.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./yagzon/yoqole 100 1.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/119792654.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/2_5422413270810112672.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/35761657.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/ADALYA - Без твоей любви.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ara Martirosyan - Ser Ka .mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ara Martirosyan – Ser Ka (2).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ara Martirosyan – Ser Ka.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>SONG BY</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./SONG/Ara Martirosyan-Bala-Bala.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ara Martirosyan-Es Inch Sirt Unes.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ara Martirosyan-Na ova.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/ari ari  (1).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Armenchik - Armenchik - Janes.mp3.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Asik_Klyatvy_Polnaya_versiya.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Beyoncé - Single Ladies (Put a Ring on It).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/David Greg - Xndrum Ei.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Davit Matevosyan - Uzundara.mp3.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Diamond.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>MUSIC MUSLIMKHAN</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./SONG/Dystinct - La.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ernest Ogannesyan-INCH VOR KAM.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Gaya Abrahamyan   Gar Araqelyan - Horinel Em  2022.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/HammAli & Navai - Цветок.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/INSTASAMKA, Лолита - На Титанике.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Jah Khalib – Искал-Нашёл.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Ka-Re - Половина.mp3.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Karotel em.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/LA - DYSTINCT Speed up.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/LADANIVA - Here s to you Ararat   POSTCARD (Official Video).m4a" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>!$*&^^$$#@#!@</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./SONG/Lamis_Kan_🎶_لميس_كان_–_Mesaytara_🎼_مسيطرة.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Martin Mkrtchyan – Hamov es .mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Mihran Tsarukyan - Harc Chka.mp3.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/NARE GEVORGYAN-ERANI OFFICIAL MUSIC VIDEO 2024.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Navai_-_Chyornyj_Meren_.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Norayr Gapoyan - Nazani.mp3.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/OKSII - Shurter.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/OKSII XCHO COVER111.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/OKSII ПЫЯЛА COVER FULL.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Razmik Amyan-Chuni Ashkharhe Qez Nman.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>MUSIQALAR SIZ UCHUN</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./SONG/RPReplay_Final1721913769 (online-audio-converter.com).mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Sam Cosmo - Lalala.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Sargis Yeghiazaryan – Siraharvel em qez.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Sona Rubenyan - Patilner.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/u1704738476.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Valkar  – Ari Ari.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Vonc nayum em.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Азат_Раимбердиев,_Ulukmanapo_Моя_Принцесса.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Баста - На заре.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Госпожа.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-frame">
+        <h2>MUSIQALAR</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="./SONG/Дай мне только шанс.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Клава_Кока_feat_FEDUK_Кабы_Не_Было_Тебя.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Круговорот.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Крылья.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Рэм Дига   Баста-Одна Любовь.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Твои обещания - NARAR JANAGA.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/ФОГЕЛЬ - НЕВАЖНО.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Эндшпиль feat TumaniYO... - Заметка.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/я тебя теряю.mp3" type="audio/mpeg">
+            </audio>
+            <audio controls>
+                <source src="./SONG/Դու ես լինելու.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="comment-section">
+        <h2>Komment Yozing</h2>
+        <form id="commentForm">
+            <textarea id="commentInput" placeholder="Izohingizni kiriting..." required></textarea>
+            <button type="submit">Jo'natish</button>
+        </form>
+
+        <div class="comments-display" id="commentsDisplay">
+            <!-- Foydalanuvchi izohlari shu yerda ko'rsatiladi -->
+        </div>
+    </div>
+    <script>
+        // Kommentlarni boshqarish
+        const form = document.getElementById('commentForm');
+        const commentInput = document.getElementById('commentInput');
+        const commentsDisplay = document.getElementById('commentsDisplay');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Forma avtomatik yuborilishini oldini oladi
+
+            const commentText = commentInput.value.trim();
+            if (commentText) {
+                // Izohni sahifada ko'rsatish
+                const newComment = document.createElement('div');
+                newComment.classList.add('single-comment');
+                newComment.textContent = commentText;
+
+                commentsDisplay.appendChild(newComment);
+
+                // Formani tozalash
+                commentInput.value = '';
+            }
+        });
+    </script>
+     <h1>Mening Musiqiy Saytim</h1>
+     <p>Saytimizga xush kelibsiz! Quyida bizning ijtimoiy tarmoqlarga o'tishingiz mumkin:</p>
+ 
+     <div class="social-links">
+         <!-- Instagram tugmasi -->
+         <a href="https://instagram.com/WEKSLAYV" target="_blank" class="instagram">Instagram</a>
+ 
+         <!-- Telegram tugmasi -->
+         <a href="https://t.me/xon_music_0" target="_blank" class="telegram">Telegram</a>
+     </div>
+     <h1>Mening YouTube Kanalimga Xush Kelibsiz!</h1>
+     <p>Quyidagi tugmani bosib mening YouTube kanalimga o'tishingiz mumkin:</p>
+ 
+     <!-- YouTube kanal tugmasi -->
+     <a href="https://www.youtube.com/@XONMUSIC-o7b" target="_blank" class="youtube-button">
+         <i>▶</i> Kanalga O'tish
+     </a>
+</body>
+</html>
